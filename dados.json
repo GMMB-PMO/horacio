@@ -1,182 +1,107 @@
-[
-  {
-    "id": "HOR-001",
-    "pergunta": "Como faço meu primeiro acesso ao Horácio?",
-    "resposta": "Se este for seu primeiro acesso, selecione “Entrar com uma conta” e, em seguida, “Registrar”. Utilize o e-mail cadastrado pelo RH/base da Amplo e confirme o registro pelo e-mail recebido.\n\nImportante: o Horácio exige um registro próprio e pode utilizar uma senha diferente daquela da rede ou do e-mail corporativo.\n\nSe o cadastro estiver ausente ou a identidade não for confirmada após essas tentativas, entre em contato com o RH para verificar o cadastro e solicitar a inclusão, se necessário. Encaminhe um print da mensagem apresentada.",
-    "categoria": "Sistemas – Horácio",
-    "palavras": "horacio primeiro acesso entrar conta registrar cadastro email RH Amplo identidade senha",
-    "atualizacao": "06/11/2026",
-    "materiais": ""
-  },
-  {
-    "id": "HOR-002",
-    "pergunta": "O que fazer quando aparece a mensagem “Identidade não confirmada”?",
-    "resposta": "Atualize a página (F5). Caso seja o primeiro acesso, selecione “Entrar com uma conta” e, em seguida, “Registrar”. Utilize o e-mail cadastrado pelo RH/base da Amplo e confirme o registro pelo e-mail recebido.\n\nLembre-se de que o Horácio exige um registro próprio e pode utilizar uma senha diferente daquela da rede ou do e-mail corporativo.\n\nSe o problema persistir, entre em contato com o RH para verificar o cadastro e solicitar a inclusão, se necessário. Encaminhe um print da mensagem apresentada.",
-    "categoria": "Sistemas – Horácio",
-    "palavras": "identidade não confirmada erro cadastro login email F5 RH",
-    "atualizacao": "06/11/2026",
-    "materiais": ""
-  },
-  {
-    "id": "HOR-003",
-    "pergunta": "Como devo lançar minhas horas no Horácio?",
-    "resposta": "1. Acesse o quadro “Novo lançamento”.\n2. Selecione o projeto.\n3. Selecione a atividade.\n4. Informe a data e a quantidade de horas.\n5. Salve/realize o lançamento.\n\nRegistre as horas efetivamente utilizadas em cada atividade, mesmo quando ultrapassarem a previsão diária.",
-    "categoria": "Sistemas – Horácio",
-    "palavras": "lançar horas novo lançamento projeto atividade data quantidade salvar apontamento",
-    "atualizacao": "06/11/2026",
-    "materiais": ""
-  },
-  {
-    "id": "HOR-004",
-    "pergunta": "Com que frequência devo realizar os lançamentos de horas?",
-    "resposta": "Os lançamentos devem ser realizados pelo menos semanalmente.\n\nPara conferir as horas por dia, acesse “Minha fila de lançamentos” > “Folha Semanal”. Confira os totais antes do envio.",
-    "categoria": "Sistemas – Horácio",
-    "palavras": "frequência semanal lançamento horas folha semanal minha fila",
-    "atualizacao": "06/11/2026",
-    "materiais": ""
-  },
-  {
-    "id": "HOR-005",
-    "pergunta": "Como devo lançar 30 minutos no Horácio?",
-    "resposta": "30 minutos devem ser lançados como 0,5 hora — não como 0,3.",
-    "categoria": "Sistemas – Horácio",
-    "palavras": "30 minutos meia hora 0,5 0,3 conversão",
-    "atualizacao": "06/11/2026",
-    "materiais": ""
-  },
-  {
-    "id": "HOR-006",
-    "pergunta": "O que continua valendo para o Banco de Horas?",
-    "resposta": "A planilha de Banco de Horas e o preenchimento da Sheila continuam vigentes até segunda ordem.",
-    "categoria": "Banco de horas",
-    "palavras": "banco horas planilha Sheila vigente preenchimento",
-    "atualizacao": "06/11/2026",
-    "materiais": ""
-  },
-  {
-    "id": "HOR-007",
-    "pergunta": "Como lançar um sábado com carga horária compensada?",
-    "resposta": "Para colaboradores cujo contrato prevê atuação aos sábados, mas cuja carga horária é compensada de segunda a quinta-feira, deve-se selecionar “Atividade Global – Indisponível” nos sábados em que essa condição se aplicar.\n\nNo campo de observação, informar: “Sem atividades, com carga horária compensada de segunda a quinta-feira.”",
+    "pergunta": "O que fazer quando a data do lançamento aparece incorreta?",
+    "resposta": "Foi relatado que atividades lançadas no dia podem aparecer com a data do dia anterior. Como conferência, verifique a data exibida antes de salvar o lançamento.\n\nTambém foi sugerido que o sistema mantenha pré-selecionada a data do último lançamento, em vez de voltar automaticamente para a data atual. O histórico registra essa sugestão como melhoria, sem confirmação de implementação.",
     "categoria": "Ponto e jornada",
-    "palavras": "sábado carga horária compensada segunda quinta atividade global indisponível observação",
-    "atualizacao": "06/11/2026",
+    "palavras": "data incorreta dia anterior lançamento apontamento data último lançamento calendário",
+    "atualizacao": "03/11/2026",
     "materiais": ""
   },
   {
-    "id": "HOR-008",
-    "pergunta": "Como devo registrar horas extras?",
-    "resposta": "Se o lançamento ultrapassar a previsão de horas por dia, isso corresponde a horas extras e segue o processo padrão já definido.",
+    "id": "HOR-023",
+    "pergunta": "O que fazer quando um estagiário não tem projetos ou programas disponíveis?",
+    "resposta": "Foram relatados casos de estagiários sem acesso aos projetos ou programas necessários, incluindo PRJ116 e PRD001.\n\nA orientação registrada foi verificar o cadastro da pessoa na base do RH e realizar o vínculo aos projetos necessários. Para encaminhar a análise, informe o nome do estagiário e os códigos dos projetos/programas ao RH e ao ponto focal/PMO, conforme o fluxo da GMMB.",
+    "categoria": "Projetos",
+    "palavras": "estagiário estágio sem projetos programas disponíveis PRJ116 PRD001 cadastro RH vínculo acesso",
+    "atualizacao": "03/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-024",
+    "pergunta": "Por que o Horácio informa que um estagiário está dispensado de enviar apontamento?",
+    "resposta": "Foi identificado caso em que o Horácio indicava que a pessoa estava dispensada de lançar horas. A causa foi relacionada a uma informação enviada na carga de dados do RH.\n\nO ajuste foi encaminhado para correção da base e reenvio à equipe responsável. Como o histórico não registra confirmação individual para todos os casos, se a mensagem aparecer, encaminhe um print ao RH e ao ponto focal para verificação.",
+    "categoria": "Recursos Humanos",
+    "palavras": "estagiário dispensado enviar apontamento lançar horas dispensa carga dados RH cadastro",
+    "atualizacao": "03/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-025",
+    "pergunta": "O que fazer quando o e-mail de recuperação de senha do Horácio não chega?",
+    "resposta": "Antes de solicitar a redefinição, verifique se o registro próprio no Horácio foi concluído e se foi utilizado o e-mail cadastrado pelo RH/base da Amplo.\n\nSe o e-mail de recuperação continuar sem chegar, encaminhe um print da tela e um relato do ocorrido ao RH, com cópia ao ponto focal, para análise da equipe de Inteligência de Dados/implantação.",
+    "categoria": "Sistemas – Horácio",
+    "palavras": "email recuperação senha redefinir não chega cadastro registro próprio RH Amplo login",
+    "atualizacao": "03/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-026",
+    "pergunta": "Por que lançamentos antigos não aparecem na Lista Compacta?",
+    "resposta": "Antes de concluir que os registros foram apagados, consulte “Minha fila de lançamentos” > “Folha Semanal”.\n\nFoi relatado que a Lista Compacta podia mostrar apenas os lançamentos globais, enquanto a Folha Semanal exibia também os registros anteriores de projetos. O histórico tratou esse comportamento como uma questão de configuração/visualização durante a implantação.",
     "categoria": "Ponto e jornada",
-    "palavras": "horas extras previsão diária excedente processo padrão",
-    "atualizacao": "06/11/2026",
+    "palavras": "lançamentos antigos Lista Compacta não aparecem registros apagados Minha fila Folha Semanal projetos global",
+    "atualizacao": "03/11/2026",
     "materiais": ""
   },
   {
-    "id": "HOR-009",
-    "pergunta": "Como registrar férias, compensação de horas ou afastamentos?",
-    "resposta": "Use “Indisponível” para férias, compensação de horas, atestados e situações equivalentes.",
+    "id": "HOR-027",
+    "pergunta": "O que fazer quando lançamentos de projetos parecem ter desaparecido?",
+    "resposta": "Primeiro, consulte “Minha fila de lançamentos” > “Folha Semanal” para verificar se os registros aparecem nessa visualização.\n\nSe os lançamentos também não estiverem na Folha Semanal, envie ao ponto focal os detalhes do caso, incluindo colaborador, projeto, atividade e período afetado, para confirmação com a equipe técnica. No histórico consultado, a recuperação dos registros ainda estava em acompanhamento.",
     "categoria": "Ponto e jornada",
-    "palavras": "férias compensação afastamento atestado indisponível",
-    "atualizacao": "06/11/2026",
+    "palavras": "lançamentos projetos desapareceram sumiram outubro períodos anteriores relançar Folha Semanal registros",
+    "atualizacao": "03/11/2026",
     "materiais": ""
   },
   {
-    "id": "HOR-010",
-    "pergunta": "Preciso criar uma atividade para pausas de café ou necessidades pessoais?",
-    "resposta": "Não é necessário criar uma atividade específica para café, higiene pessoal ou necessidades semelhantes. Esse tempo já está diluído na jornada quando o recurso HD é vendido/alocado ao projeto.",
-    "categoria": "Sistemas – Horácio",
-    "palavras": "pausa café higiene pessoal necessidades atividade jornada HD",
-    "atualizacao": "06/11/2026",
-    "materiais": ""
-  },
-  {
-    "id": "HOR-011",
-    "pergunta": "O que devo escrever na descrição de uma atividade Global?",
-    "resposta": "Ao utilizar atividades “Global”, descreva objetivamente o que foi realizado, indicando o assunto/objeto e a finalidade e, quando pertinente, com quem ou para quem foi feito.",
-    "categoria": "Sistemas – Horácio",
-    "palavras": "atividade global descrição observação assunto finalidade realizado",
-    "atualizacao": "06/11/2026",
-    "materiais": ""
-  },
-  {
-    "id": "HOR-012",
-    "pergunta": "Como favoritar projetos e atividades?",
-    "resposta": "É possível favoritar projetos e atividades pelo ícone de estrela. Para isso, o projeto ou a atividade precisa estar selecionado no campo.",
-    "categoria": "Sistemas – Horácio",
-    "palavras": "favoritos favoritar estrela projeto atividade",
-    "atualizacao": "06/11/2026",
-    "materiais": ""
-  },
-  {
-    "id": "HOR-013",
-    "pergunta": "O que fazer quando preciso lançar uma atividade fora da data do projeto?",
-    "resposta": "Verifique a data de início do vínculo do colaborador no projeto. Informe ao ponto focal o código do projeto, as datas afetadas e a mensagem apresentada.",
+    "id": "HOR-028",
+    "pergunta": "O que fazer quando não consigo lançar horas retroativas após ser incluído em um projeto?",
+    "resposta": "Verifique a data de início do seu vínculo no projeto. O histórico registra casos em que não era possível lançar dias anteriores à inclusão do colaborador no projeto.\n\nInforme ao ponto focal o código do projeto, as datas que precisam ser lançadas e a mensagem apresentada, para conferência da data de início do vínculo. Em um dos casos registrados, após o ajuste da data de início e um novo teste, o lançamento foi realizado com sucesso.",
     "categoria": "Projetos",
-    "palavras": "atividade fora data projeto vínculo colaborador código datas ponto focal",
-    "atualizacao": "06/11/2026",
+    "palavras": "lançamento retroativo horas dias anteriores inclusão projeto data início vínculo bloqueado",
+    "atualizacao": "03/11/2026",
     "materiais": ""
   },
   {
-    "id": "HOR-014",
-    "pergunta": "O que significa a mensagem “Alocação excedente”?",
-    "resposta": "A mensagem está relacionada à quantidade de horas permitidas para alocação naquela atividade. Nesta fase, pode indicar erro de configuração, pois todos deveriam estar alocados nas atividades.\n\nInforme o projeto e a atividade para verificação.",
+    "id": "HOR-029",
+    "pergunta": "O que fazer quando o projeto aparece, mas não permite lançar horas?",
+    "resposta": "A configuração de acesso ao projeto é feita pelo Gerente do Projeto (GP), e não pelo gerente da gerência de área.\n\nPara projetos da GMMB, o PMO/ponto focal informou que apoiaria operacionalmente os ajustes durante a implantação. Para projetos de outras gerências, procure o respectivo GP. Após a inclusão ou ajuste do vínculo, atualize a página ou entre novamente no Horácio e teste o lançamento.",
     "categoria": "Projetos",
-    "palavras": "alocação excedente horas permitidas atividade erro configuração projeto",
-    "atualizacao": "06/11/2026",
+    "palavras": "projeto aparece não permite lançar horas acesso GP gerente projeto PMO ponto focal vínculo atualizar página",
+    "atualizacao": "03/11/2026",
     "materiais": ""
   },
   {
-    "id": "HOR-015",
-    "pergunta": "O que significa a mensagem “Exceção permitida”?",
-    "resposta": "A mensagem indica uma flexibilização autorizada pelo Gerente para aquela situação. O lançamento pode ser realizado normalmente.",
-    "categoria": "Projetos",
-    "palavras": "exceção permitida flexibilização gerente lançar horas",
-    "atualizacao": "06/11/2026",
-    "materiais": ""
-  },
-  {
-    "id": "HOR-016",
-    "pergunta": "O que fazer quando um projeto não aparece na lista ou não permite lançar horas?",
-    "resposta": "Se o projeto aparece, mas não permite lançar horas: para projetos da GMMB, comunique também o PMO/ponto focal; para projetos de outras gerências, procure o respectivo GP.\n\nApós a inclusão, atualize a página ou entre novamente e teste.",
-    "categoria": "Projetos",
-    "palavras": "projeto não aparece lista não permite lançar horas GMMB PMO ponto focal GP",
-    "atualizacao": "06/11/2026",
-    "materiais": ""
-  },
-  {
-    "id": "HOR-017",
-    "pergunta": "O que fazer quando a tela do Horácio fica carregando ou apresenta instabilidade?",
-    "resposta": "Se o acesso ficar em “Carregando” ou apresentar instabilidade, aguarde e tente novamente. Se necessário, atualize a página (F5), saia e entre novamente ou limpe o cache do navegador.\n\nSe persistir, encaminhe print e descrição do erro à Fernanda/ponto focal.",
+    "id": "HOR-030",
+    "pergunta": "O que fazer quando o Horácio fica temporariamente indisponível e não consigo registrar as horas?",
+    "resposta": "Quando o acesso ao Horácio estiver temporariamente indisponível, o histórico orienta manter o controle no Horácio antigo/Excel, registrando as datas e atividades no mesmo formato, para posterior encaminhamento e eventual carga no sistema quando regularizado.\n\nO histórico também registra que, quando o volume de lançamentos fosse pequeno, poderia ser avaliada a espera pelo ajuste. Em caso de dúvida sobre como proceder no período, procure o ponto focal.",
     "categoria": "Sistemas – Horácio",
-    "palavras": "tela carregando instabilidade F5 cache navegador Fernanda erro",
-    "atualizacao": "06/11/2026",
+    "palavras": "indisponível fora do ar não acessa registrar horas Horácio antigo Excel planilha contingência",
+    "atualizacao": "03/11/2026",
     "materiais": ""
   },
   {
-    "id": "HOR-018",
-    "pergunta": "O que fazer se houver alocação excedente em atividades laboratoriais?",
-    "resposta": "Foram relatados lançamentos em “Produção técnica – Elaboração de relatórios / etc.”. Se aparecer “alocação excedente” ou outra inconsistência, informe o projeto e a atividade para verificação.",
-    "categoria": "Projetos",
-    "palavras": "atividades laboratoriais produção técnica elaboração relatórios alocação excedente",
-    "atualizacao": "06/11/2026",
+    "id": "HOR-031",
+    "pergunta": "O que fazer quando a planilha Sheila/Gantt está desatualizada ou apresenta atividades de outra pessoa?",
+    "resposta": "Foram relatadas planilhas com atividades desatualizadas ou pertencentes a outras pessoas/equipes. Confira a planilha Sheila salva no Teams, corrija a sua própria Gantt quando necessário e sinalize as divergências identificadas.\n\nA correlação deve relacionar as atividades às macroatividades padrão do Horácio, sem criar distinção por projeto.",
+    "categoria": "Processos internos",
+    "palavras": "Sheila Gantt planilha Teams desatualizada atividades outra pessoa equipe correlação macroatividades",
+    "atualizacao": "03/11/2026",
     "materiais": ""
   },
   {
-    "id": "HOR-019",
-    "pergunta": "Quais funcionalidades e informações cadastrais podem apresentar limitações nesta fase?",
-    "resposta": "Alguns recursos já visíveis na plataforma podem ainda não estar aplicáveis nesta fase. Cargo, data de entrada e outras informações cadastrais podem apresentar inconsistências.\n\nNesta fase, todos estão alocados em todas as atividades/projetos e as aprovações são automáticas.",
+    "id": "HOR-032",
+    "pergunta": "Como identificar a categoria correta para uma atividade no Horácio?",
+    "resposta": "O histórico registra dúvidas sobre o significado das categorias/macrotarefas do Horácio, pois a estrutura da planilha Sheila era organizada de forma mais livre.\n\nO encaminhamento registrado foi revisar a correspondência (de/para) entre as atividades da Sheila e as categorias padrão do Horácio e concentrar as dúvidas no grupo específico. Em caso de dúvida sobre uma atividade, informe a descrição utilizada na Sheila para que seja possível verificar a categoria correspondente.",
+    "categoria": "Processos internos",
+    "palavras": "categoria correta atividade macrotarefa macroatividade Sheila de para correspondência classificação",
+    "atualizacao": "03/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-033",
+    "pergunta": "O que fazer quando a função “Copiar o último” replica informações incorretas?",
+    "resposta": "O guia original registra uma falha em que o recurso “Copiar o último” poderia replicar apenas um projeto específico.\n\nSe isso ocorrer, confira os dados copiados antes de salvar, registre a ocorrência com um print e encaminhe à Fernanda para envio à equipe técnica.",
     "categoria": "Sistemas – Horácio",
-    "palavras": "funcionalidades dados cadastrais cargo data entrada alocação aprovação automática",
-    "atualizacao": "06/11/2026",
-    "materiais": ""
-  },
-  {
-    "id": "HOR-020",
-    "pergunta": "Como devo pedir ajuda ou reportar um ajuste no Horácio?",
-    "resposta": "Antes de solicitar apoio, verifique se a dúvida já foi respondida no histórico do grupo GMMB_Horácio e neste FAQ.\n\nSe precisar registrar um ajuste, uma melhoria ou tratar de um caso que exija apoio, no grupo, marque @Fernanda Isabella Batista Chamone.",
-    "categoria": "Dúvidas gerais",
-    "palavras": "ajuda suporte ajuste melhoria grupo GMMB_Horácio Fernanda",
-    "atualizacao": "06/11/2026",
+    "palavras": "Copiar o último copiar último replica projeto incorreto falha funcionalidade print Fernanda",
+    "atualizacao": "03/11/2026",
     "materiais": ""
   }
 ]
