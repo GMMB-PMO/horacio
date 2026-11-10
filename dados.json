@@ -1,0 +1,182 @@
+[
+  {
+    "id": "HOR-001",
+    "pergunta": "Como faço meu primeiro acesso ao Horácio?",
+    "resposta": "Se este for seu primeiro acesso, selecione “Entrar com uma conta” e, em seguida, “Registrar”. Utilize o e-mail cadastrado pelo RH/base da Amplo e confirme o registro pelo e-mail recebido.\n\nImportante: o Horácio exige um registro próprio e pode utilizar uma senha diferente daquela da rede ou do e-mail corporativo.\n\nSe o cadastro estiver ausente ou a identidade não for confirmada após essas tentativas, entre em contato com o RH para verificar o cadastro e solicitar a inclusão, se necessário. Encaminhe um print da mensagem apresentada.",
+    "categoria": "Sistemas – Horácio",
+    "palavras": "horacio primeiro acesso entrar conta registrar cadastro email RH Amplo identidade senha",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-002",
+    "pergunta": "O que fazer quando aparece a mensagem “Identidade não confirmada”?",
+    "resposta": "Atualize a página (F5). Caso seja o primeiro acesso, selecione “Entrar com uma conta” e, em seguida, “Registrar”. Utilize o e-mail cadastrado pelo RH/base da Amplo e confirme o registro pelo e-mail recebido.\n\nLembre-se de que o Horácio exige um registro próprio e pode utilizar uma senha diferente daquela da rede ou do e-mail corporativo.\n\nSe o problema persistir, entre em contato com o RH para verificar o cadastro e solicitar a inclusão, se necessário. Encaminhe um print da mensagem apresentada.",
+    "categoria": "Sistemas – Horácio",
+    "palavras": "identidade não confirmada erro cadastro login email F5 RH",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-003",
+    "pergunta": "Como devo lançar minhas horas no Horácio?",
+    "resposta": "1. Acesse o quadro “Novo lançamento”.\n2. Selecione o projeto.\n3. Selecione a atividade.\n4. Informe a data e a quantidade de horas.\n5. Salve/realize o lançamento.\n\nRegistre as horas efetivamente utilizadas em cada atividade, mesmo quando ultrapassarem a previsão diária.",
+    "categoria": "Sistemas – Horácio",
+    "palavras": "lançar horas novo lançamento projeto atividade data quantidade salvar apontamento",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-004",
+    "pergunta": "Com que frequência devo realizar os lançamentos de horas?",
+    "resposta": "Os lançamentos devem ser realizados pelo menos semanalmente.\n\nPara conferir as horas por dia, acesse “Minha fila de lançamentos” > “Folha Semanal”. Confira os totais antes do envio.",
+    "categoria": "Sistemas – Horácio",
+    "palavras": "frequência semanal lançamento horas folha semanal minha fila",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-005",
+    "pergunta": "Como devo lançar 30 minutos no Horácio?",
+    "resposta": "30 minutos devem ser lançados como 0,5 hora — não como 0,3.",
+    "categoria": "Sistemas – Horácio",
+    "palavras": "30 minutos meia hora 0,5 0,3 conversão",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-006",
+    "pergunta": "O que continua valendo para o Banco de Horas?",
+    "resposta": "A planilha de Banco de Horas e o preenchimento da Sheila continuam vigentes até segunda ordem.",
+    "categoria": "Banco de horas",
+    "palavras": "banco horas planilha Sheila vigente preenchimento",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-007",
+    "pergunta": "Como lançar um sábado com carga horária compensada?",
+    "resposta": "Para colaboradores cujo contrato prevê atuação aos sábados, mas cuja carga horária é compensada de segunda a quinta-feira, deve-se selecionar “Atividade Global – Indisponível” nos sábados em que essa condição se aplicar.\n\nNo campo de observação, informar: “Sem atividades, com carga horária compensada de segunda a quinta-feira.”",
+    "categoria": "Ponto e jornada",
+    "palavras": "sábado carga horária compensada segunda quinta atividade global indisponível observação",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-008",
+    "pergunta": "Como devo registrar horas extras?",
+    "resposta": "Se o lançamento ultrapassar a previsão de horas por dia, isso corresponde a horas extras e segue o processo padrão já definido.",
+    "categoria": "Ponto e jornada",
+    "palavras": "horas extras previsão diária excedente processo padrão",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-009",
+    "pergunta": "Como registrar férias, compensação de horas ou afastamentos?",
+    "resposta": "Use “Indisponível” para férias, compensação de horas, atestados e situações equivalentes.",
+    "categoria": "Ponto e jornada",
+    "palavras": "férias compensação afastamento atestado indisponível",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-010",
+    "pergunta": "Preciso criar uma atividade para pausas de café ou necessidades pessoais?",
+    "resposta": "Não é necessário criar uma atividade específica para café, higiene pessoal ou necessidades semelhantes. Esse tempo já está diluído na jornada quando o recurso HD é vendido/alocado ao projeto.",
+    "categoria": "Sistemas – Horácio",
+    "palavras": "pausa café higiene pessoal necessidades atividade jornada HD",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-011",
+    "pergunta": "O que devo escrever na descrição de uma atividade Global?",
+    "resposta": "Ao utilizar atividades “Global”, descreva objetivamente o que foi realizado, indicando o assunto/objeto e a finalidade e, quando pertinente, com quem ou para quem foi feito.",
+    "categoria": "Sistemas – Horácio",
+    "palavras": "atividade global descrição observação assunto finalidade realizado",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-012",
+    "pergunta": "Como favoritar projetos e atividades?",
+    "resposta": "É possível favoritar projetos e atividades pelo ícone de estrela. Para isso, o projeto ou a atividade precisa estar selecionado no campo.",
+    "categoria": "Sistemas – Horácio",
+    "palavras": "favoritos favoritar estrela projeto atividade",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-013",
+    "pergunta": "O que fazer quando preciso lançar uma atividade fora da data do projeto?",
+    "resposta": "Verifique a data de início do vínculo do colaborador no projeto. Informe ao ponto focal o código do projeto, as datas afetadas e a mensagem apresentada.",
+    "categoria": "Projetos",
+    "palavras": "atividade fora data projeto vínculo colaborador código datas ponto focal",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-014",
+    "pergunta": "O que significa a mensagem “Alocação excedente”?",
+    "resposta": "A mensagem está relacionada à quantidade de horas permitidas para alocação naquela atividade. Nesta fase, pode indicar erro de configuração, pois todos deveriam estar alocados nas atividades.\n\nInforme o projeto e a atividade para verificação.",
+    "categoria": "Projetos",
+    "palavras": "alocação excedente horas permitidas atividade erro configuração projeto",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-015",
+    "pergunta": "O que significa a mensagem “Exceção permitida”?",
+    "resposta": "A mensagem indica uma flexibilização autorizada pelo Gerente para aquela situação. O lançamento pode ser realizado normalmente.",
+    "categoria": "Projetos",
+    "palavras": "exceção permitida flexibilização gerente lançar horas",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-016",
+    "pergunta": "O que fazer quando um projeto não aparece na lista ou não permite lançar horas?",
+    "resposta": "Se o projeto aparece, mas não permite lançar horas: para projetos da GMMB, comunique também o PMO/ponto focal; para projetos de outras gerências, procure o respectivo GP.\n\nApós a inclusão, atualize a página ou entre novamente e teste.",
+    "categoria": "Projetos",
+    "palavras": "projeto não aparece lista não permite lançar horas GMMB PMO ponto focal GP",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-017",
+    "pergunta": "O que fazer quando a tela do Horácio fica carregando ou apresenta instabilidade?",
+    "resposta": "Se o acesso ficar em “Carregando” ou apresentar instabilidade, aguarde e tente novamente. Se necessário, atualize a página (F5), saia e entre novamente ou limpe o cache do navegador.\n\nSe persistir, encaminhe print e descrição do erro à Fernanda/ponto focal.",
+    "categoria": "Sistemas – Horácio",
+    "palavras": "tela carregando instabilidade F5 cache navegador Fernanda erro",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-018",
+    "pergunta": "O que fazer se houver alocação excedente em atividades laboratoriais?",
+    "resposta": "Foram relatados lançamentos em “Produção técnica – Elaboração de relatórios / etc.”. Se aparecer “alocação excedente” ou outra inconsistência, informe o projeto e a atividade para verificação.",
+    "categoria": "Projetos",
+    "palavras": "atividades laboratoriais produção técnica elaboração relatórios alocação excedente",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-019",
+    "pergunta": "Quais funcionalidades e informações cadastrais podem apresentar limitações nesta fase?",
+    "resposta": "Alguns recursos já visíveis na plataforma podem ainda não estar aplicáveis nesta fase. Cargo, data de entrada e outras informações cadastrais podem apresentar inconsistências.\n\nNesta fase, todos estão alocados em todas as atividades/projetos e as aprovações são automáticas.",
+    "categoria": "Sistemas – Horácio",
+    "palavras": "funcionalidades dados cadastrais cargo data entrada alocação aprovação automática",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-020",
+    "pergunta": "Como devo pedir ajuda ou reportar um ajuste no Horácio?",
+    "resposta": "Antes de solicitar apoio, verifique se a dúvida já foi respondida no histórico do grupo GMMB_Horácio e neste FAQ.\n\nSe precisar registrar um ajuste, uma melhoria ou tratar de um caso que exija apoio, no grupo, marque @Fernanda Isabella Batista Chamone.",
+    "categoria": "Dúvidas gerais",
+    "palavras": "ajuda suporte ajuste melhoria grupo GMMB_Horácio Fernanda",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  }
+]
