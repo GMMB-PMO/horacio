@@ -3,7 +3,6 @@
 
 const ICONS = {
   'Sistemas – Horácio': '▣',
-  'Recursos Humanos': '♙',
   'Ponto e jornada': '◷',
   'Banco de horas': '▤',
   'Processos internos': '☷',
@@ -40,7 +39,7 @@ function cats() {
   return [...new Set([
     ...DEFAULT_CATS,
     ...records.map(r => r.categoria)
-  ])];
+  ])].filter(c => norm(c) !== norm('Recursos Humanos'));
 }
 
 function count(c) {
