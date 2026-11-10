@@ -468,15 +468,99 @@ async function init() {
   }
 }
 
+// Sugestões automáticas de perguntas
+const searchInput = $('search');
+const searchBox = searchInput.closest('.search');
+
+const suggestionBox = document.createElement('div');
+suggestionBox.id = 'suggestions';
+suggestionBox.className = 'suggestions';
+suggestionBox.setAttribute('role', 'listbox');
+suggestionBox.hidden = true;
+
+searchBox.appendChild(suggestionBox);
+
+function renderSuggestions(value) {
+  suggestionBox.replaceChildren();
+
+  const query = norm(value);
+
+  if (query.length < 2) {
+    suggestionBox.hidden = true;
+    return;
+  }
+
+  const words = query.split(/\s+/).filter(Boolean);
+
+  const matches = records
+    .filter(r => {
+      const searchable = norm([
+        r.pergunta,
+        r.palavras,
+        r.resposta,
+        r.categoria
+      ].join(' '));
+
+      return words.every(word => searchable.includes(word));
+    })
+    .slice(0, 6);
+
+  if (!matches.length) {
+    suggestionBox.hidden = true;
+    return;
+  }
+
+  matches.forEach(r => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'suggestion-item';
+    button.setAttribute('role', 'option');
+
+    const title = document.createElement('strong');
+    title.textContent = r.pergunta;
+
+    const meta = document.createElement('small');
+    meta.textContent = r.categoria;
+
+    button.append(title, meta);
+
+    button.addEventListener('click', () => {
+      suggestionBox.hidden = true;
+      searchInput.value = r.pergunta;
+      term = r.pergunta;
+      category = 'Todas';
+
+      location.hash = 'duvida/' + encodeURIComponent(r.id);
+    });
+
+    suggestionBox.append(button);
+  });
+
+  suggestionBox.hidden = false;
+}
+
 // Pesquisa
-$('search').addEventListener('input', e => {
+searchInput.addEventListener('input', e => {
   term = e.target.value;
   category = 'Todas';
 
   render();
+  renderSuggestions(term);
 
   if (!$('detail').hidden) {
     location.hash = 'perguntas';
+  }
+});
+
+searchInput.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    suggestionBox.hidden = true;
+  }
+});
+
+document.addEventListener('click', e => {
+  if (!searchBox.contains(e.target)) {
+    suggestionBox.hidden = true;
   }
 });
 
