@@ -1,3 +1,4 @@
+
 'use strict';
 
 const ICONS = {
@@ -18,11 +19,10 @@ let term = '';
 
 const $ = id => document.getElementById(id);
 
-const norm = s =>
-  String(s ?? '')
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase();
+const norm = s => String(s ?? '')
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .toLowerCase();
 
 function clean(raw, i) {
   return {
@@ -37,12 +37,10 @@ function clean(raw, i) {
 }
 
 function cats() {
-  return [
-    ...new Set([
-      ...DEFAULT_CATS,
-      ...records.map(r => r.categoria)
-    ])
-  ];
+  return [...new Set([
+    ...DEFAULT_CATS,
+    ...records.map(r => r.categoria)
+  ])];
 }
 
 function count(c) {
@@ -140,7 +138,6 @@ function render() {
     e.className = 'empty';
     e.textContent =
       'Nenhuma dúvida encontrada. Experimente outro termo ou categoria.';
-
     root.append(e);
     return;
   }
@@ -169,9 +166,8 @@ function render() {
 
     b.append(top, meta);
 
-    // Abre diretamente a resposta selecionada
     b.addEventListener('click', () => {
-      openQuestion(r.id);
+      location.hash = 'duvida/' + encodeURIComponent(r.id);
     });
 
     root.append(b);
@@ -181,10 +177,7 @@ function render() {
 function safeUrl(value) {
   try {
     const u = new URL(value, location.href);
-
-    return ['https:', 'http:'].includes(u.protocol)
-      ? u.href
-      : null;
+    return ['https:', 'http:'].includes(u.protocol) ? u.href : null;
   } catch {
     return null;
   }
@@ -215,7 +208,6 @@ function answerNodes(text) {
       const li = document.createElement('li');
       li.textContent = match[1];
       list.append(li);
-
     } else if (/^https?:\/\/\S+$/i.test(t)) {
       list = null;
 
@@ -226,7 +218,6 @@ function answerNodes(text) {
       a.textContent = t;
 
       root.append(a);
-
     } else {
       list = null;
 
@@ -238,15 +229,18 @@ function answerNodes(text) {
 }
 
 function openQuestion(id) {
-  const r = records.find(
-    x => String(x.id) === String(id)
-  );
+  const r = records.find(x => String(x.id) === String(id));
 
   if (!r) {
     console.error('Pergunta não encontrada:', id);
+    showHome();
+    $('notice').hidden = false;
+    $('notice').textContent =
+      'Não foi possível localizar essa pergunta. Verifique se a base de dados está atualizada.';
     return;
   }
 
+  $('notice').hidden = true;
   $('home').hidden = true;
   $('detail').hidden = false;
 
@@ -290,82 +284,36 @@ function openQuestion(id) {
   }
 
   $('detailfooter').textContent =
-    'Última atualização: ' +
-    (r.atualizacao || 'não informada');
+    'Última atualização: ' + (r.atualizacao || 'não informada');
 
   window.scrollTo(0, 0);
-
-  // Atualiza o endereço sem provocar retorno à página inicial
-  const newHash = '#duvida/' + encodeURIComponent(r.id);
-
-  if (location.hash !== newHash) {
-    history.pushState(null, '', newHash);
-  }
 }
 
 function showHome() {
   $('home').hidden = false;
   $('detail').hidden = true;
-  window.scrollTo(0, 0);
 }
 
 function route() {
-  const hash = location.hash || '';
+  const hash = location.hash || '#inicio';
 
   if (hash.startsWith('#duvida/')) {
     const id = decodeURIComponent(
       hash.substring('#duvida/'.length)
     );
-
     openQuestion(id);
-  } else {
-    showHome();
+    return;
   }
-}
 
-async function init() {
-  try {
-    const url = window.CENTRAL_CONFIG?.csvUrl?.trim();
+  showHome();
 
-    const response = await fetch(
-      url || './dados.json',
-      { cache: 'no-store' }
-    );
-
-    if (!response.ok) {
-      throw new Error('HTTP ' + response.status);
-    }
-
-    let raw;
-
-    if (url) {
-      const csv = await response.text();
-      raw = csvParse(csv);
-    } else {
-      raw = await response.json();
-    }
-
-    records = raw
-      .map(clean)
-      .filter(r => r.pergunta);
-
-    if (!records.length) {
-      throw new Error('Base de perguntas vazia');
-    }
-
-    renderCats();
-    render();
-
-    // Recupera a pergunta diretamente pelo endereço
-    route();
-
-  } catch (error) {
-    console.error('Erro ao carregar a Central:', error);
-
-    $('notice').hidden = false;
-    $('notice').textContent =
-      'Não foi possível carregar as perguntas. Detalhe: ' +
-      error.message;
+  if (hash === '#perguntas') {
+    setTimeout(() => {
+      $('listtitle').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 50);
   }
 }
 
@@ -392,12 +340,9 @@ function csvParse(csv) {
       field = '';
     } else if ((c === '\n' || c === '\r') && !quote) {
       if (c === '\r' && csv[i + 1] === '\n') i++;
-
       row.push(field);
 
-      if (row.some(x => x.trim())) {
-        rows.push(row);
-      }
+      if (row.some(x => x.trim())) rows.push(row);
 
       row = [];
       field = '';
@@ -407,13 +352,9 @@ function csvParse(csv) {
   }
 
   row.push(field);
+  if (row.some(x => x.trim())) rows.push(row);
 
-  if (row.some(x => x.trim())) {
-    rows.push(row);
-  }
-
-  const heads = (rows.shift() || [])
-    .map(x => norm(x.trim()));
+  const heads = (rows.shift() || []).map(x => norm(x.trim()));
 
   return rows.map(r =>
     Object.fromEntries(
@@ -422,30 +363,59 @@ function csvParse(csv) {
   );
 }
 
-// Pesquisa
+async function init() {
+  try {
+    const url = window.CENTRAL_CONFIG?.csvUrl?.trim();
+
+    const response = await fetch(
+      url || './dados.json',
+      { cache: 'no-store' }
+    );
+
+    if (!response.ok) {
+      throw new Error('HTTP ' + response.status);
+    }
+
+    const raw = url
+      ? csvParse(await response.text())
+      : await response.json();
+
+    records = raw.map(clean).filter(r => r.pergunta);
+
+    if (!records.length) {
+      throw new Error('Base de perguntas vazia');
+    }
+
+    renderCats();
+    render();
+    route();
+
+  } catch (error) {
+    console.error('Erro ao carregar a Central:', error);
+    $('notice').hidden = false;
+    $('notice').textContent =
+      'Não foi possível carregar as perguntas. Detalhe: ' +
+      error.message;
+  }
+}
+
 $('search').addEventListener('input', e => {
   term = e.target.value;
   category = 'Todas';
-
   render();
 
   if (!$('detail').hidden) {
-    history.pushState(null, '', '#perguntas');
-    showHome();
+    location.hash = 'perguntas';
   }
 });
 
-// Navegação
 $('all').onclick = () => select('Todas');
 
 $('back').onclick = () => {
-  history.pushState(null, '', '#perguntas');
-  showHome();
+  location.hash = 'perguntas';
 };
 
 window.addEventListener('hashchange', route);
-
-window.addEventListener('popstate', route);
 
 window.addEventListener('keydown', e => {
   if (
