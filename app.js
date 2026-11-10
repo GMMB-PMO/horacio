@@ -18,10 +18,12 @@ let term = '';
 
 const $ = id => document.getElementById(id);
 
-const norm = s => String(s ?? '')
-  .normalize('NFD')
-  .replace(/[\u0300-\u036f]/g, '')
-  .toLowerCase();
+const norm = s =>
+  String(s ?? '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim();
 
 function clean(raw, i) {
   return {
@@ -35,11 +37,15 @@ function clean(raw, i) {
   };
 }
 
+// Remove Recursos Humanos somente da navegação.
+// As perguntas continuam preservadas na base.
 function cats() {
-  return [...new Set([
-    ...DEFAULT_CATS,
-    ...records.map(r => r.categoria)
-  ])].filter(c => norm(c) !== norm('Recursos Humanos'));
+  return [
+    ...new Set([
+      ...DEFAULT_CATS,
+      ...records.map(r => r.categoria)
+    ])
+  ].filter(c => norm(c) !== norm('Recursos Humanos'));
 }
 
 function count(c) {
@@ -137,6 +143,7 @@ function render() {
     e.className = 'empty';
     e.textContent =
       'Nenhuma dúvida encontrada. Experimente outro termo ou categoria.';
+
     root.append(e);
     return;
   }
@@ -176,7 +183,10 @@ function render() {
 function safeUrl(value) {
   try {
     const u = new URL(value, location.href);
-    return ['https:', 'http:'].includes(u.protocol) ? u.href : null;
+
+    return ['https:', 'http:'].includes(u.protocol)
+      ? u.href
+      : null;
   } catch {
     return null;
   }
@@ -207,6 +217,7 @@ function answerNodes(text) {
       const li = document.createElement('li');
       li.textContent = match[1];
       list.append(li);
+
     } else if (/^https?:\/\/\S+$/i.test(t)) {
       list = null;
 
@@ -217,6 +228,7 @@ function answerNodes(text) {
       a.textContent = t;
 
       root.append(a);
+
     } else {
       list = null;
 
@@ -228,14 +240,18 @@ function answerNodes(text) {
 }
 
 function openQuestion(id) {
-  const r = records.find(x => String(x.id) === String(id));
+  const r = records.find(
+    x => String(x.id) === String(id)
+  );
 
   if (!r) {
     console.error('Pergunta não encontrada:', id);
     showHome();
+
     $('notice').hidden = false;
     $('notice').textContent =
       'Não foi possível localizar essa pergunta. Verifique se a base de dados está atualizada.';
+
     return;
   }
 
@@ -283,7 +299,8 @@ function openQuestion(id) {
   }
 
   $('detailfooter').textContent =
-    'Última atualização: ' + (r.atualizacao || 'não informada');
+    'Última atualização: ' +
+    (r.atualizacao || 'não informada');
 
   window.scrollTo(0, 0);
 }
@@ -300,6 +317,7 @@ function route() {
     const id = decodeURIComponent(
       hash.substring('#duvida/'.length)
     );
+
     openQuestion(id);
     return;
   }
@@ -334,26 +352,36 @@ function csvParse(csv) {
       } else {
         quote = !quote;
       }
+
     } else if (c === ',' && !quote) {
       row.push(field);
       field = '';
+
     } else if ((c === '\n' || c === '\r') && !quote) {
       if (c === '\r' && csv[i + 1] === '\n') i++;
+
       row.push(field);
 
-      if (row.some(x => x.trim())) rows.push(row);
+      if (row.some(x => x.trim())) {
+        rows.push(row);
+      }
 
       row = [];
       field = '';
+
     } else {
       field += c;
     }
   }
 
   row.push(field);
-  if (row.some(x => x.trim())) rows.push(row);
 
-  const heads = (rows.shift() || []).map(x => norm(x.trim()));
+  if (row.some(x => x.trim())) {
+    rows.push(row);
+  }
+
+  const heads = (rows.shift() || [])
+    .map(x => norm(x.trim()));
 
   return rows.map(r =>
     Object.fromEntries(
@@ -366,31 +394,73 @@ async function init() {
   try {
     const url = window.CENTRAL_CONFIG?.csvUrl?.trim();
 
+    const dataUrl = url || new URL(
+      './dados.json',
+      document.baseURI
+    ).href;
+
     const response = await fetch(
-      url || './dados.json',
+      dataUrl,
       { cache: 'no-store' }
     );
 
     if (!response.ok) {
-      throw new Error('HTTP ' + response.status);
+      throw new Error(
+        'Erro ao acessar a base: HTTP ' + response.status +
+        ' — ' + dataUrl
+      );
     }
 
-    const raw = url
-      ? csvParse(await response.text())
-      : await response.json();
+    let raw;
 
-    records = raw.map(clean).filter(r => r.pergunta);
+    if (url) {
+      const csv = await response.text();
+      raw = csvParse(csv);
+
+    } else {
+      const content = (await response.text())
+        .replace(/^\uFEFF/, '')
+        .trim();
+
+      try {
+        raw = JSON.parse(content);
+      } catch (parseError) {
+        console.error(
+          'Conteúdo recebido de dados.json:',
+          content.slice(0, 300)
+        );
+
+        throw new Error(
+          'O dados.json não contém JSON válido. ' +
+          'Verifique o arquivo publicado no GitHub. ' +
+          parseError.message
+        );
+      }
+    }
+
+    if (!Array.isArray(raw)) {
+      throw new Error(
+        'A base precisa ser uma lista de perguntas entre colchetes [ ].'
+      );
+    }
+
+    records = raw
+      .map(clean)
+      .filter(r => r.pergunta);
 
     if (!records.length) {
-      throw new Error('Base de perguntas vazia');
+      throw new Error('Base de perguntas vazia.');
     }
 
     renderCats();
     render();
     route();
 
+    $('notice').hidden = true;
+
   } catch (error) {
     console.error('Erro ao carregar a Central:', error);
+
     $('notice').hidden = false;
     $('notice').textContent =
       'Não foi possível carregar as perguntas. Detalhe: ' +
@@ -398,9 +468,11 @@ async function init() {
   }
 }
 
+// Pesquisa
 $('search').addEventListener('input', e => {
   term = e.target.value;
   category = 'Todas';
+
   render();
 
   if (!$('detail').hidden) {
@@ -408,6 +480,7 @@ $('search').addEventListener('input', e => {
   }
 });
 
+// Navegação
 $('all').onclick = () => select('Todas');
 
 $('back').onclick = () => {
