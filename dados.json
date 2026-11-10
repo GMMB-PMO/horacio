@@ -1,3 +1,68 @@
+
+[
+  {
+    "id": "HOR-001",
+    "pergunta": "Como faço meu primeiro acesso ao Horácio?",
+    "resposta": "Se este for seu primeiro acesso, selecione “Entrar com uma conta” e, em seguida, “Registrar”. Utilize o e-mail cadastrado pelo RH/base da Amplo e confirme o registro pelo e-mail recebido.\n\nImportante: o Horácio exige um registro próprio e pode utilizar uma senha diferente daquela da rede ou do e-mail corporativo.\n\nSe o cadastro estiver ausente ou a identidade não for confirmada após essas tentativas, entre em contato com o RH para verificar o cadastro e solicitar a inclusão, se necessário. Encaminhe um print da mensagem apresentada.",
+    "categoria": "Sistemas – Horácio",
+    "palavras": "horacio primeiro acesso entrar conta registrar cadastro email RH Amplo identidade senha",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-002",
+    "pergunta": "O que fazer quando aparece a mensagem “Identidade não confirmada”?",
+    "resposta": "Atualize a página (F5). Caso seja o primeiro acesso, selecione “Entrar com uma conta” e, em seguida, “Registrar”. Utilize o e-mail cadastrado pelo RH/base da Amplo e confirme o registro pelo e-mail recebido.\n\nLembre-se de que o Horácio exige um registro próprio e pode utilizar uma senha diferente daquela da rede ou do e-mail corporativo.\n\nSe o problema persistir, entre em contato com o RH para verificar o cadastro e solicitar a inclusão, se necessário. Encaminhe um print da mensagem apresentada.",
+    "categoria": "Sistemas – Horácio",
+    "palavras": "identidade não confirmada erro cadastro login email F5 RH",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-003",
+    "pergunta": "Como devo lançar minhas horas no Horácio?",
+    "resposta": "1. Acesse o quadro “Novo lançamento”.\n2. Selecione o projeto.\n3. Selecione a atividade.\n4. Informe a data e a quantidade de horas.\n5. Salve/realize o lançamento.\n\nRegistre as horas efetivamente utilizadas em cada atividade, mesmo quando ultrapassarem a previsão diária.",
+    "categoria": "Sistemas – Horácio",
+    "palavras": "lançar horas novo lançamento projeto atividade data quantidade salvar apontamento",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-004",
+    "pergunta": "Com que frequência devo realizar os lançamentos de horas?",
+    "resposta": "Os lançamentos devem ser realizados pelo menos semanalmente.\n\nPara conferir as horas por dia, acesse “Minha fila de lançamentos” > “Folha Semanal”. Confira os totais antes do envio.",
+    "categoria": "Sistemas – Horácio",
+    "palavras": "frequência semanal lançamento horas folha semanal minha fila",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-005",
+    "pergunta": "Como devo lançar 30 minutos no Horácio?",
+    "resposta": "30 minutos devem ser lançados como 0,5 hora — não como 0,3.",
+    "categoria": "Sistemas – Horácio",
+    "palavras": "30 minutos meia hora 0,5 0,3 conversão",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-006",
+    "pergunta": "O que continua valendo para o Banco de Horas?",
+    "resposta": "A planilha de Banco de Horas e o preenchimento da Sheila continuam vigentes até segunda ordem.",
+    "categoria": "Banco de horas",
+    "palavras": "banco horas planilha Sheila vigente preenchimento",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
+  {
+    "id": "HOR-007",
+    "pergunta": "Como lançar um sábado com carga horária compensada?",
+    "resposta": "Para colaboradores cujo contrato prevê atuação aos sábados, mas cuja carga horária é compensada de segunda a quinta-feira, deve-se selecionar “Atividade Global – Indisponível” nos sábados em que essa condição se aplicar.\n\nNo campo de observação, informar: “Sem atividades, com carga horária compensada de segunda a quinta-feira.”",
+    "categoria": "Ponto e jornada",
+    "palavras": "sábado carga horária compensada segunda quinta atividade global indisponível observação",
+    "atualizacao": "06/11/2026",
+    "materiais": ""
+  },
   {
     "id": "HOR-008",
     "pergunta": "Como devo registrar horas extras?",
